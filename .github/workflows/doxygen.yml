@@ -1,1 +1,35 @@
+name: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Run 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - 'hint'
+
+jobs:
+  run:
+    name: 🚀 Run
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Install Dep
+        run:
+          sudo apt update
+          sudo apt install doxygen
+
+      - name: Unittest
+        shell: bash
+        run:
+          doxygen -g
+          doxygen
+
+      - name: Doc
+        uses: actions/upload-artifact@v4
+        with:
+          name: my-artifact
+          path: path/to/artifact

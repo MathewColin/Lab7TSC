@@ -2,4 +2,5 @@
 
 Multiple implementations for binary tree traversals.
 
-Signed by Ana si eu
+Lab 7
+Signed by Ana-Maria Mirza si Matei Calin Ceausu
