@@ -1,0 +1,19 @@
+name: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Run 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run:
+    name: 🚀 Run
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Unittest
+        shell: bash
+        run: |
+          pytest TestTree.py
