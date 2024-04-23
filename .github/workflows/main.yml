@@ -16,6 +16,11 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Install Dep
+        run:
+          python3 -m pip install --uprgrade pip
+          pip install pytest
+
       - name: Unittest
         shell: bash
         run:
