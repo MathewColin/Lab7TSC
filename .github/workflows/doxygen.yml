@@ -19,7 +19,7 @@ jobs:
 
       - name: Install Dep
         run:
-          sudo apt update
+          sudo apt update;
           sudo apt install doxygen
 
       - name: Unittest
