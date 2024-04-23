@@ -18,7 +18,7 @@ jobs:
 
       - name: Install Dep
         run:
-          python3 -m pip install --uprgrade pip
+          python3 -m pip install --upgrade pip
           pip install pytest
 
       - name: Unittest
